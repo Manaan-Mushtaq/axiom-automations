@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Axiom Automations - AI Automation Services for Businesses</title>
+  <title>Axiom Automations - Automating Businesses</title>
   <link rel="stylesheet" href="style.css">
-<link rel="icon" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
-
 </head>
 <body>
+  <!-- URGENCY BANNER -->
+  <div style="background: linear-gradient(90deg, #dc3545, #f97373); color: white; text-align: center; padding: 14px; font-weight: 700; font-size: 14px; position: sticky; top: 0; z-index: 50;">
+    🔥 LIMITED TIME: Free AI Strategy Consultation ($500 value) + 50% Off First Month - Ends Tonight at 11:59 PM!
+  </div>
+
   <!-- Navigation -->
-<button onclick="toggleDarkMode()" style="background: transparent; border: none; color: white; cursor: pointer; font-size: 20px;">🌙</button>
   <nav class="navbar">
     <div class="nav-wrapper">
       <div class="logo">
@@ -24,6 +25,7 @@
         <span>AXIOM</span>
       </div>
       <div class="nav-spacer"></div>
+      <button class="btn btn-primary" onclick="scrollToSection('lead-capture')" style="padding: 10px 20px; font-size: 12px;">Book Free Call</button>
       <button class="btn-nav" onclick="scrollToSection('cta-section')">Contact Sales</button>
     </div>
   </nav>
@@ -48,9 +50,9 @@
       </p>
 
       <div class="hero-cta">
-        <button class="btn btn-primary btn-lg" onclick="scrollToSection('services')">
+        <button class="btn btn-primary btn-lg" onclick="scrollToSection('lead-capture')">
           <span class="btn-icon">→</span>
-          View Services
+          Get Free Audit
         </button>
         <button class="btn btn-secondary btn-lg" onclick="scrollToSection('pricing')">See Pricing</button>
       </div>
@@ -85,6 +87,34 @@
     </div>
   </section>
 
+  <!-- LEAD CAPTURE SECTION (CRITICAL) -->
+  <section id="lead-capture" style="padding: 80px 40px; background: linear-gradient(135deg, rgba(45, 156, 235, 0.1), rgba(45, 156, 235, 0.05)); text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 16px; color: #ffffff;">Get Your Free AI Audit</h2>
+      <p style="font-size: 16px; color: #a8a8a8; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+        See exactly how much your business could save with AI automation. We'll analyze your operations and send a custom report within 24 hours. No obligation, no credit card required.
+      </p>
+      
+      <form onsubmit="captureLeadEmail(event)" style="max-width: 550px; margin: 0 auto; padding: 40px; border: 1.5px solid rgba(45, 156, 235, 0.3); border-radius: 16px; background: linear-gradient(135deg, rgba(15, 21, 40, 0.95), rgba(45, 156, 235, 0.05));">
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+          <input type="text" placeholder="First name" id="lead-fname" required style="padding: 14px; border-radius: 8px; border: 1.5px solid rgba(45, 156, 235, 0.2); background: rgba(15, 21, 40, 0.9); color: #e8e8e8; font-size: 14px;">
+          <input type="text" placeholder="Last name" id="lead-lname" required style="padding: 14px; border-radius: 8px; border: 1.5px solid rgba(45, 156, 235, 0.2); background: rgba(15, 21, 40, 0.9); color: #e8e8e8; font-size: 14px;">
+        </div>
+
+        <input type="email" placeholder="your@email.com" id="lead-email" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1.5px solid rgba(45, 156, 235, 0.2); background: rgba(15, 21, 40, 0.9); color: #e8e8e8; font-size: 14px; margin-bottom: 12px;">
+        
+        <input type="tel" placeholder="Phone number (+91...)" id="lead-phone" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1.5px solid rgba(45, 156, 235, 0.2); background: rgba(15, 21, 40, 0.9); color: #e8e8e8; font-size: 14px; margin-bottom: 12px;">
+        
+        <input type="text" placeholder="Company name" id="lead-company" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1.5px solid rgba(45, 156, 235, 0.2); background: rgba(15, 21, 40, 0.9); color: #e8e8e8; font-size: 14px; margin-bottom: 20px;">
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 14px;">Get Your Free Audit Now</button>
+      </form>
+      
+      <p style="margin-top: 20px; font-size: 13px; color: #7a7a7a;">✓ Report sent within 24 hours • ✓ No credit card needed • ✓ Zero obligation</p>
+    </div>
+  </section>
+
   <!-- Services Section -->
   <section class="services" id="services">
     <div class="container">
@@ -108,7 +138,7 @@
           <h3>Customer Support</h3>
           <p class="service-label">Intelligent Responses</p>
           <p class="service-desc">AI-powered customer support handling inquiries, tickets, and complaints automatically. Reduces support costs by 70% while improving response times.</p>
-          <div class="service-price">Starting at $499/month</div>
+          <div class="service-price">Starting at $3000/month</div>
           <button class="service-btn" onclick="contactSales('Customer Support')">Learn More</button>
         </div>
 
@@ -126,9 +156,9 @@
           <h3>Email Reply</h3>
           <p class="service-label">Automated Responses</p>
           <p class="service-desc">AI reads incoming emails and sends smart, personalized replies automatically. Perfect for sales, support, and operations teams.</p>
-          <div class="service-price">Starting at $299/month</div>
+          ><div class="service-price">Starting at $2999/month</div>
           <button class="service-btn" onclick="contactSales('Email Reply')">Learn More</button>
-        </div>
+        </div
 
         <!-- Service 3: CRM Management -->
         <div class="service-card service-card-animated">
@@ -144,7 +174,7 @@
           <h3>CRM Management</h3>
           <p class="service-label">Smart Lead Tracking</p>
           <p class="service-desc">Automated lead capture, qualification, follow-ups, and relationship management. Never lose a lead again with AI-powered CRM.</p>
-          <div class="service-price">Starting at $399/month</div>
+          <div class="service-price">Starting at $1499/month</div>
           <button class="service-btn" onclick="contactSales('CRM Management')">Learn More</button>
         </div>
 
@@ -161,7 +191,7 @@
           <h3>Lead Generation</h3>
           <p class="service-label">AI Targeting</p>
           <p class="service-desc">AI prospecting that finds, qualifies, and reaches out to ideal customers. Generate 5x more qualified leads with zero manual effort.</p>
-          <div class="service-price">Starting at $599/month</div>
+          <div class="service-price">Starting at $4499/month</div>
           <button class="service-btn" onclick="contactSales('Lead Generation')">Learn More</button>
         </div>
 
@@ -172,13 +202,13 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
               <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-              ircle cx="18" cy="13" r="5"/>
+                            ircle cx="18" cy="13" r="5"/>
             </svg>
           </div>
           <h3>Content & Social</h3>
           <p class="service-label">Social Automation</p>
           <p class="service-desc">AI generates, schedules, and posts engaging content across all social media channels. Maintain brand voice 24/7.</p>
-          <div class="service-price">Starting at $349/month</div>
+          <div class="service-price">Starting at $2499/month</div>
           <button class="service-btn" onclick="contactSales('Content & Social')">Learn More</button>
         </div>
 
@@ -198,9 +228,31 @@
           <h3>Data Processing</h3>
           <p class="service-label">Smart Analytics</p>
           <p class="service-desc">Automate data cleaning, validation, transformation, and reporting workflows. Transform raw data into insights instantly.</p>
-          <div class="service-price">Starting at $449/month</div>
+          <div class="service-price">Starting at $1499/month</div>
           <button class="service-btn" onclick="contactSales('Data Processing')">Learn More</button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS SECTION -->
+  <section style="padding: 60px 40px; background: transparent; text-align: center;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+      <div style="padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; background: rgba(15, 21, 40, 0.5);">
+        <div style="font-size: 40px; font-weight: 800; color: #1d9ceb; margin-bottom: 8px;" id="client-counter">500+</div>
+        <p style="color: #a8a8a8; font-size: 14px;">Businesses Automated</p>
+      </div>
+      <div style="padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; background: rgba(15, 21, 40, 0.5);">
+        <div style="font-size: 40px; font-weight: 800; color: #1d9ceb; margin-bottom: 8px;">$50M+</div>
+        <p style="color: #a8a8a8; font-size: 14px;">In Costs Saved</p>
+      </div>
+      <div style="padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; background: rgba(15, 21, 40, 0.5);">
+        <div style="font-size: 40px; font-weight: 800; color: #1d9ceb; margin-bottom: 8px;">98%</div>
+        <p style="color: #a8a8a8; font-size: 14px;">Customer Satisfaction</p>
+      </div>
+      <div style="padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; background: rgba(15, 21, 40, 0.5);">
+        <div style="font-size: 40px; font-weight: 800; color: #1d9ceb; margin-bottom: 8px;">48hrs</div>
+        <p style="color: #a8a8a8; font-size: 14px;">Average Setup Time</p>
       </div>
     </div>
   </section>
@@ -243,12 +295,69 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS SECTION -->
+  <section style="padding: 80px 40px; background: rgba(45, 156, 235, 0.03);">
+    <div class="container">
+      <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 60px; text-align: center;">What Our Clients Say</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+        <div style="padding: 28px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 16px; background: rgba(15, 21, 40, 0.7);">
+          <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+            <span style="color: #fbbf24;">★★★★★</span>
+          </div>
+          <p style="color: #e8e8e8; font-size: 14px; margin-bottom: 20px; line-height: 1.8;">
+            "Axiom saved us $40K/month on support costs. Best investment we made this year. The AI is eerily accurate."
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #1d9ceb); flex-shrink: 0;"></div>
+            <div>
+              <p style="font-weight: 700; color: #e8e8e8; margin: 0; font-size: 14px;">John Smith</p>
+              <p style="font-size: 12px; color: #a8a8a8; margin: 0;">E-commerce CEO</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 28px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 16px; background: rgba(15, 21, 40, 0.7);">
+          <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+            <span style="color: #fbbf24;">★★★★★</span>
+          </div>
+          <p style="color: #e8e8e8; font-size: 14px; margin-bottom: 20px; line-height: 1.8;">
+            "We went from answering 500 emails/day to 50. Game changer for our team. Setup was painless - 48 hours like they said."
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #1d9ceb); flex-shrink: 0;"></div>
+            <div>
+              <p style="font-weight: 700; color: #e8e8e8; margin: 0; font-size: 14px;">Sarah Johnson</p>
+              <p style="font-size: 12px; color: #a8a8a8; margin: 0;">Support Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 28px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 16px; background: rgba(15, 21, 40, 0.7);">
+          <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+            <span style="color: #fbbf24;">★★★★★</span>
+          </div>
+          <p style="color: #e8e8e8; font-size: 14px; margin-bottom: 20px; line-height: 1.8;">
+            "No hidden fees, excellent support, and they actually delivered on their promises. Can't recommend highly enough."
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #1d9ceb); flex-shrink: 0;"></div>
+            <div>
+              <p style="font-weight: 700; color: #e8e8e8; margin: 0; font-size: 14px;">Mike Chen</p>
+              <p style="font-size: 12px; color: #a8a8a8; margin: 0;">Operations Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pricing Section -->
   <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-header">
         <h2>Simple, Transparent Pricing</h2>
-        <p class="subtitle">Pay only for the services you use. Scale up or down anytime.</p>
+        <p class="subtitle">Pay only for the services you use. You can cancel anytime within 1 week.</p>
       </div>
 
       <div class="pricing-grid">
@@ -257,33 +366,33 @@
           <span class="pricing-badge">STARTER</span>
           <h3>Basic Support</h3>
           <div class="pricing-value">
-            <span class="price">$299</span><span class="period">/month</span>
+            <span class="price">$2999</span><span class="period">/month</span>
           </div>
           <p class="pricing-desc">Perfect for small teams</p>
           
           <button class="btn btn-secondary pricing-btn" onclick="contactSales('Starter Plan')">Get Started</button>
 
           <ul class="pricing-features">
-            <li>1 AI Service (Support OR Email)</li>
+            <li>1 AI Service (Anaysis OR Email)</li>
             <li>Up to 1,000 interactions/month</li>
             <li>Email support</li>
             <li>Basic analytics</li>
           </ul>
         </div>
 
-        <!-- Professional -->
+        <!-- Professional (FEATURED) -->
         <div class="pricing-card featured pricing-card-animated">
-          <span class="pricing-badge highlight">POPULAR</span>
+          <span class="pricing-badge highlight">MOST POPULAR</span>
           <h3>Professional</h3>
           <div class="pricing-value">
-            <span class="price">$899</span><span class="period">/month</span>
+            <span class="price">$4999</span><span class="period">/month</span>
           </div>
-                    <p class="pricing-desc">For growing businesses</p>
+          <p class="pricing-desc">For growing businesses</p>
           
           <button class="btn btn-primary pricing-btn" onclick="contactSales('Professional Plan')">Start Free Trial</button>
 
           <ul class="pricing-features">
-            <li>3 AI Services (Support + Email + CRM)</li>
+            <li>3 AI Services (Lead Capture + Email + CRM)</li>
             <li>Up to 10,000 interactions/month</li>
             <li>Priority support (4-hour response)</li>
             <li>Advanced analytics & reporting</li>
@@ -295,7 +404,7 @@
           <span class="pricing-badge">ENTERPRISE</span>
           <h3>Complete Suite</h3>
           <div class="pricing-value">
-            <span class="price">$1,999</span><span class="period">/month</span>
+            <span class="price">$7999</span><span class="period">/month</span>
           </div>
           <p class="pricing-desc">For large organizations</p>
           
@@ -314,6 +423,63 @@
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
+  <section style="padding: 80px 40px; background: rgba(45, 156, 235, 0.03);">
+    <div class="container">
+      <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 60px; text-align: center;">Frequently Asked Questions</h2>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="margin-bottom: 20px; padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; cursor: pointer; transition: all 300ms ease;" onclick="toggleFAQ(this)">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; color: #ffffff;">
+            How long does implementation take?
+            <span style="font-size: 20px; color: #1d9ceb;">+</span>
+          </h3>
+          <p style="color: #a8a8a8; font-size: 14px; display: none; margin-top: 12px;">Most clients are live within 48 hours. We handle setup, integrations, and testing. You just need to approve and start using it.</p>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; cursor: pointer; transition: all 300ms ease;" onclick="toggleFAQ(this)">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; color: #ffffff;">
+            Do you offer refunds?
+            <span style="font-size: 20px; color: #1d9ceb;">+</span>
+          </h3>
+          <p style="color: #a8a8a8; font-size: 14px; display: none; margin-top: 12px;">100% satisfaction guaranteed. If not happy with your AI automation within 30 days, we'll give you a full refund. No questions asked.</p>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; cursor: pointer; transition: all 300ms ease;" onclick="toggleFAQ(this)">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; color: #ffffff;">
+            Can I cancel anytime?
+            <span style="font-size: 20px; color: #1d9ceb;">+</span>
+          </h3>
+          <p style="color: #a8a8a8; font-size: 14px; display: none; margin-top: 12px;">Yes, absolutely. No long-term contracts. Cancel with 7 days notice anytime. You won't be locked in.</p>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; cursor: pointer; transition: all 300ms ease;" onclick="toggleFAQ(this)">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; color: #ffffff;">
+            What if AI doesn't work for my use case?
+            <span style="font-size: 20px; color: #1d9ceb;">+</span>
+          </h3>
+          <p style="color: #a8a8a8; font-size: 14px; display: none; margin-top: 12px;">We do a free audit first. If it's not a fit for your business, we'll be honest before you pay anything. Your success matters to us.</p>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; cursor: pointer; transition: all 300ms ease;" onclick="toggleFAQ(this)">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; color: #ffffff;">
+            What integrations do you support?
+            <span style="font-size: 20px; color: #1d9ceb;">+</span>
+          </h3>
+          <p style="color: #a8a8a8; font-size: 14px; display: none; margin-top: 12px;">We integrate with 1000+ apps including Slack, Zapier, HubSpot, Salesforce, Stripe, and more. Custom integrations available for Enterprise plans.</p>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 24px; border: 1.5px solid rgba(45, 156, 235, 0.2); border-radius: 12px; cursor: pointer; transition: all 300ms ease;" onclick="toggleFAQ(this)">
+          <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; color: #ffffff;">
+            Is my data secure?
+            <span style="font-size: 20px; color: #1d9ceb;">+</span>
+          </h3>
+          <p style="color: #a8a8a8; font-size: 14px; display: none; margin-top: 12px;">Yes. Bank-level encryption (AES-256), SOC 2 Type II certified, GDPR compliant, and regular security audits. Your data is protected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- How It Works -->
   <section class="how-it-works">
     <div class="container">
@@ -328,8 +494,8 @@
               <path d="M12 6v6l4 2.5"/>
             </svg>
           </div>
-          <h3>Choose Services</h3>
-          <p>Select which AI services your business needs (Support, Email, CRM, etc.)</p>
+          <h3>Get Free Audit</h3>
+          <p>Fill out the form above and we'll analyze your operations within 24 hours.</p>
         </div>
         <div class="step step-animated">
           <div class="step-number">2</div>
@@ -339,8 +505,8 @@
               <path d="M8 12h8M12 8v8"/>
             </svg>
           </div>
-          <h3>Connect Channels</h3>
-          <p>Connect your email, website, CRM, and communication platforms (2 minutes)</p>
+          <h3>Choose Service</h3>
+          <p>Pick which AI services fit your business (Support, Email, CRM, etc.)</p>
         </div>
         <div class="step step-animated">
           <div class="step-number">3</div>
@@ -350,8 +516,8 @@
               <path d="M9 12l2 2 4-4"/>
             </svg>
           </div>
-          <h3>AI Goes Live</h3>
-          <p>Your AI agents start working immediately. No training or setup needed.</p>
+          <h3>Live in 48 Hours</h3>
+          <p>We handle setup, testing, and integration. You're ready to go.</p>
         </div>
         <div class="step step-animated">
           <div class="step-number">4</div>
@@ -361,8 +527,8 @@
               <path d="M12 6v6h6"/>
             </svg>
           </div>
-          <h3>Monitor & Scale</h3>
-          <p>Track performance in real-time. Add more services or scale as you grow.</p>
+          <h3>Start Saving</h3>
+          <p>Watch your costs drop and efficiency soar. We monitor and optimize monthly.</p>
         </div>
       </div>
     </div>
@@ -412,9 +578,9 @@
     <div class="container cta-container">
       <div class="cta-content">
         <h2>Ready to Automate?</h2>
-        <p>Join 200+ businesses already saving time and money with Axiom</p>
-        <button class="btn btn-primary btn-large cta-btn" onclick="contactSales('Demo Request')">Schedule Demo (Free)</button>
-        <p class="cta-note">15-minute call. No pressure. See exactly how much you could save.</p>
+        <p>Join 500+ businesses already saving time and money with Axiom. Get your free audit above or schedule a call.</p>
+        <button class="btn btn-primary btn-large cta-btn" onclick="scrollToSection('lead-capture')">Get Free Audit Now</button>
+        <p class="cta-note">Report sent within 24 hours. No credit card needed. Zero obligation.</p>
       </div>
     </div>
   </section>
@@ -448,7 +614,7 @@
           <a href="#">About</a>
           <a href="#">Blog</a>
           <a href="#pricing">Pricing</a>
-          <a href="#cta-section">Contact</a>
+          <a href="#lead-capture">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
@@ -464,13 +630,31 @@
       <div class="social-links">
         <a href="#">Twitter</a>
         <a href="#">LinkedIn</a>
-        <a href="mailto:contact@axiomautomations.com">Email</a>
+        <a href="mailto:axiomautomations.manaan@gmail.com.com">Email</a>
       </div>
     </div>
-
   </footer>
+
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '69652c4d5660bdd8c051db0b' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
